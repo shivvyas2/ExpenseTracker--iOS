@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        NavigationView {
+            ScrollView{
+                VStack(alignment: .leading, spacing: 20){
+                    Text("Overview").font(.title).bold()
+                }.padding().frame(maxWidth: .infinity)
+                
+                
+            }.background(Color.Background).navigationBarTitleDisplayMode(.inline).toolbar{ToolbarItem{
+                Image(systemName: "bell.badge").symbolRenderingMode(.palette).foregroundColor(Color.Icon)
+            }}
+            
+        }.navigationViewStyle(.stack)
     }
 }
 

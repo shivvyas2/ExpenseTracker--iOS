@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ExpenseTrackerApp: App {
+    @StateObject var transcationListVM = TransactionListViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(transcationListVM)
         }
     }
 }
