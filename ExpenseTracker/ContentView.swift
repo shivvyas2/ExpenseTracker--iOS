@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var transactionListVM: TransactionListViewModel
     var body: some View {
         NavigationView {
             ScrollView{
                 VStack(alignment: .leading, spacing: 20){
                     Text("Overview").font(.title).bold()
+                    RecentTransactionList()
                 }.padding().frame(maxWidth: .infinity)
                 
                 
@@ -24,6 +26,18 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static let transactionListVM: TransactionListViewModel = {
+        let transactionListVM = TransactionListViewModel()
+        transactionListVM.transcations = transactionListPreviewData
+        return transactionListVM
+    }()
+    static var previews: some View{
+        Group {
+            ContentView()
+            ContentView().preferredColorScheme(.dark)
+        }
+        .environmentObject(transactionListVM)
+    }
+
 }
