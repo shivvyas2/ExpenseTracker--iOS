@@ -9,6 +9,8 @@ import Foundation
 import Collections
 
 typealias TransactionGroup = OrderedDictionary<String, [Transaction]>
+typealias TransactionPrefixSum = [(String, Double)]
+
 class TransactionListViewModel: ObservableObject {
     @Published var transactions: [Transaction] = []
     
