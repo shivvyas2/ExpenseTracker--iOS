@@ -22,14 +22,14 @@ struct ContentView: View {
                 Image(systemName: "bell.badge").symbolRenderingMode(.palette).foregroundColor(Color.Icon)
             }}
             
-        }.navigationViewStyle(.stack)
+        }.navigationViewStyle(.stack).accentColor(.primary)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static let transactionListVM: TransactionListViewModel = {
         let transactionListVM = TransactionListViewModel()
-        transactionListVM.transcations = transactionListPreviewData
+        transactionListVM.transactions = transactionListPreviewData
         return transactionListVM
     }()
     static var previews: some View{

@@ -16,7 +16,9 @@ struct RecentTransactionList: View {
             HStack{
                 Text("Recent Transactions").bold()
                 Spacer()
+                
                 NavigationLink{
+                    TransactionList()
                 } label: {
                     HStack(spacing: 4){
                         Text("See All")
@@ -29,7 +31,7 @@ struct RecentTransactionList: View {
             
             //Recent Transaction lists
             
-            ForEach(Array(transactionListVM.transcations.prefix(5).enumerated()), id: \.element)
+            ForEach(Array(transactionListVM.transactions.prefix(5).enumerated()), id: \.element)
                 { index,transactions in
                 TransactionRow(transaction: transactions)
                 
@@ -49,7 +51,7 @@ struct RecentTransactionList: View {
 struct RecentTransactionList_Previews: PreviewProvider {
     static let transactionListVM: TransactionListViewModel = {
         let transactionListVM = TransactionListViewModel()
-        transactionListVM.transcations = transactionListPreviewData
+        transactionListVM.transactions = transactionListPreviewData
         return transactionListVM
     }()
     static var previews: some View{
