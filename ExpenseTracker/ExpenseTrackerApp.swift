@@ -9,12 +9,24 @@ import SwiftUI
 
 @main
 struct ExpenseTrackerApp: App {
-    @StateObject var transcationListVM = TransactionListViewModel()
+    @StateObject var authViewModel = AuthenticationViewModel()
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(transcationListVM)
-            
+            Group {
+                if authViewModel.isAuthenticated {
+                    AuthenticatedView(authViewModel: authViewModel)
+                } else {
+                    LoginView(authViewModel: authViewModel)
+                }
+            }
+            .onOpenURL { url in
+                handleOktaCallback(url: url)
+            }
         }
+    }
+    
+    private func handleOktaCallback(url: URL) {
+        authViewModel.handleCallback(url: url)
     }
 }

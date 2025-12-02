@@ -25,6 +25,10 @@
 		A9927B452C3D05B300EEB4C5 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = A9927B442C3D05B300EEB4C5 /* Collections */; };
 		A9927B472C3D05B300EEB4C5 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = A9927B462C3D05B300EEB4C5 /* OrderedCollections */; };
 		A9927B4A2C3D071900EEB4C5 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = A9927B492C3D071900EEB4C5 /* SwiftUICharts */; };
+		A9927B4F2C3D080000EEB4C8 /* OktaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927B4B2C3D080000EEB4C5 /* OktaConfig.swift */; };
+		A9927B502C3D080000EEB4C9 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927B4C2C3D080000EEB4C5 /* AuthenticationViewModel.swift */; };
+		A9927B512C3D080000EEB4CA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927B4D2C3D080000EEB4C6 /* LoginView.swift */; };
+		A9927B522C3D080000EEB4CB /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927B4E2C3D080000EEB4C7 /* AuthenticatedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 		A9927B022C3C6CA200EEB4C5 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		A9927B072C3C722C00EEB4C5 /* RecentTransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionList.swift; sourceTree = "<group>"; };
 		A9927B412C3CFAA600EEB4C5 /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
+		A9927B4B2C3D080000EEB4C5 /* OktaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OktaConfig.swift; sourceTree = "<group>"; };
+		A9927B4C2C3D080000EEB4C5 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		A9927B4D2C3D080000EEB4C6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A9927B4E2C3D080000EEB4C7 /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				A9927AF92C3C620300EEB4C5 /* TransactionModel.swift */,
+				A9927B4B2C3D080000EEB4C5 /* OktaConfig.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				A9927B022C3C6CA200EEB4C5 /* TransactionListViewModel.swift */,
+				A9927B4C2C3D080000EEB4C5 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -176,6 +186,8 @@
 				A9927B072C3C722C00EEB4C5 /* RecentTransactionList.swift */,
 				A9927AFD2C3C64FC00EEB4C5 /* TransactionRow.swift */,
 				A9927B412C3CFAA600EEB4C5 /* TransactionList.swift */,
+				A9927B4D2C3D080000EEB4C6 /* LoginView.swift */,
+				A9927B4E2C3D080000EEB4C7 /* AuthenticatedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +342,10 @@
 				A94C9CFF2C38C796003F19EC /* Extensions.swift in Sources */,
 				A9927B032C3C6CA200EEB4C5 /* TransactionListViewModel.swift in Sources */,
 				A94C9CD42C38B1B0003F19EC /* ExpenseTrackerApp.swift in Sources */,
+				A9927B4F2C3D080000EEB4C8 /* OktaConfig.swift in Sources */,
+				A9927B502C3D080000EEB4C9 /* AuthenticationViewModel.swift in Sources */,
+				A9927B512C3D080000EEB4CA /* LoginView.swift in Sources */,
+				A9927B522C3D080000EEB4CB /* AuthenticatedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +527,14 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				INFOPLIST_KEY_CFBundleURLTypes = (
+					{
+						CFBundleURLName = "OktaCallback";
+						CFBundleURLSchemes = (
+							"shivvyas.ExpenseTracker",
+						);
+					},
+				);
 			};
 			name = Debug;
 		};
@@ -540,6 +564,14 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				INFOPLIST_KEY_CFBundleURLTypes = (
+					{
+						CFBundleURLName = "OktaCallback";
+						CFBundleURLSchemes = (
+							"shivvyas.ExpenseTracker",
+						);
+					},
+				);
 			};
 			name = Release;
 		};
