@@ -1,5 +1,5 @@
 {
-  "originHash" : "ea2834c923ab9f068beb0d140a01e77eebc4f71d2f55617d8687c65824238ece",
+  "originHash" : "612398da857dabd0f91e3f749764dd8f892ac0df1ac481b612681573f53b2274",
   "pins" : [
     {
       "identity" : "chartview",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "caa75ecbc0d68f2b50d714909566406f80214186",
         "version" : "2.0.0-beta.2"
+      }
+    },
+    {
+      "identity" : "okta-oidc-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/okta/okta-oidc-ios",
+      "state" : {
+        "revision" : "ff0b914c25f0638a08c837d433841d4fa22a79cc",
+        "version" : "3.11.7"
       }
     },
     {

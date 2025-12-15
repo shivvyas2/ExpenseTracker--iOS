@@ -29,6 +29,11 @@
 		A9927B502C3D080000EEB4C9 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927B4C2C3D080000EEB4C5 /* AuthenticationViewModel.swift */; };
 		A9927B512C3D080000EEB4CA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927B4D2C3D080000EEB4C6 /* LoginView.swift */; };
 		A9927B522C3D080000EEB4CB /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927B4E2C3D080000EEB4C7 /* AuthenticatedView.swift */; };
+		A9927B582C3D090000EEB4CD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927B532C3D090000EEB4C8 /* MainTabView.swift */; };
+		A9927B592C3D090000EEB4CE /* DashboardTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927B542C3D090000EEB4C9 /* DashboardTab.swift */; };
+		A9927B5A2C3D090000EEB4CF /* AddExpenseTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927B552C3D090000EEB4CA /* AddExpenseTab.swift */; };
+		A9927B5B2C3D090000EEB4D0 /* ProfileTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927B562C3D090000EEB4CB /* ProfileTab.swift */; };
+		A9927B5C2C3D090000EEB4D1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927B572C3D090000EEB4CC /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,12 @@
 		A9927B4C2C3D080000EEB4C5 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		A9927B4D2C3D080000EEB4C6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A9927B4E2C3D080000EEB4C7 /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
+		A9927B532C3D090000EEB4C8 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		A9927B542C3D090000EEB4C9 /* DashboardTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTab.swift; sourceTree = "<group>"; };
+		A9927B552C3D090000EEB4CA /* AddExpenseTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseTab.swift; sourceTree = "<group>"; };
+		A9927B562C3D090000EEB4CB /* ProfileTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTab.swift; sourceTree = "<group>"; };
+		A9927B572C3D090000EEB4CC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		A9D8D1BF2EDF859F00EBC514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +135,7 @@
 		A94C9CD22C38B1B0003F19EC /* ExpenseTracker */ = {
 			isa = PBXGroup;
 			children = (
+				A9D8D1BF2EDF859F00EBC514 /* Info.plist */,
 				A94C9CD52C38B1B0003F19EC /* ContentView.swift */,
 				A94C9CD32C38B1B0003F19EC /* ExpenseTrackerApp.swift */,
 				A9927B062C3C6F2500EEB4C5 /* Views */,
@@ -188,6 +200,11 @@
 				A9927B412C3CFAA600EEB4C5 /* TransactionList.swift */,
 				A9927B4D2C3D080000EEB4C6 /* LoginView.swift */,
 				A9927B4E2C3D080000EEB4C7 /* AuthenticatedView.swift */,
+				A9927B532C3D090000EEB4C8 /* MainTabView.swift */,
+				A9927B542C3D090000EEB4C9 /* DashboardTab.swift */,
+				A9927B552C3D090000EEB4CA /* AddExpenseTab.swift */,
+				A9927B562C3D090000EEB4CB /* ProfileTab.swift */,
+				A9927B572C3D090000EEB4CC /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +230,7 @@
 				A9927B442C3D05B300EEB4C5 /* Collections */,
 				A9927B462C3D05B300EEB4C5 /* OrderedCollections */,
 				A9927B492C3D071900EEB4C5 /* SwiftUICharts */,
+				A9D8D1BF2EDF847500EBC514 /* OktaOidc */,
 			);
 			productName = ExpenseTracker;
 			productReference = A94C9CD02C38B1B0003F19EC /* ExpenseTracker.app */;
@@ -262,7 +280,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					A94C9CCF2C38B1B0003F19EC = {
 						CreatedOnToolsVersion = 15.4;
@@ -290,6 +308,7 @@
 				A9927AFF2C3C6C0300EEB4C5 /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */,
 				A9927B432C3D046800EEB4C5 /* XCRemoteSwiftPackageReference "swift-collections" */,
 				A9927B482C3D071900EEB4C5 /* XCRemoteSwiftPackageReference "ChartView" */,
+				A9D8D1BE2EDF847500EBC514 /* XCRemoteSwiftPackageReference "okta-oidc-ios" */,
 			);
 			productRefGroup = A94C9CD12C38B1B0003F19EC /* Products */;
 			projectDirPath = "";
@@ -346,6 +365,11 @@
 				A9927B502C3D080000EEB4C9 /* AuthenticationViewModel.swift in Sources */,
 				A9927B512C3D080000EEB4CA /* LoginView.swift in Sources */,
 				A9927B522C3D080000EEB4CB /* AuthenticatedView.swift in Sources */,
+				A9927B582C3D090000EEB4CD /* MainTabView.swift in Sources */,
+				A9927B592C3D090000EEB4CE /* DashboardTab.swift in Sources */,
+				A9927B5A2C3D090000EEB4CF /* AddExpenseTab.swift in Sources */,
+				A9927B5B2C3D090000EEB4D0 /* ProfileTab.swift in Sources */,
+				A9927B5C2C3D090000EEB4D1 /* SignUpView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +441,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = Z42YU5W6WY;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -440,6 +465,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -480,6 +506,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = Z42YU5W6WY;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -496,6 +523,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -509,9 +537,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpenseTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = Z42YU5W6WY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpenseTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleURLTypes = "{\n    CFBundleURLName = OktaCallback;\n    CFBundleURLSchemes =     (\n        \"shivvyas.ExpenseTracker\"\n    );\n}";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -527,14 +556,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				INFOPLIST_KEY_CFBundleURLTypes = (
-					{
-						CFBundleURLName = "OktaCallback";
-						CFBundleURLSchemes = (
-							"shivvyas.ExpenseTracker",
-						);
-					},
-				);
 			};
 			name = Debug;
 		};
@@ -546,9 +567,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpenseTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = Z42YU5W6WY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpenseTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleURLTypes = "{\n    CFBundleURLName = OktaCallback;\n    CFBundleURLSchemes =     (\n        \"shivvyas.ExpenseTracker\"\n    );\n}";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -564,25 +586,15 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				INFOPLIST_KEY_CFBundleURLTypes = (
-					{
-						CFBundleURLName = "OktaCallback";
-						CFBundleURLSchemes = (
-							"shivvyas.ExpenseTracker",
-						);
-					},
-				);
 			};
 			name = Release;
 		};
 		A94C9CF82C38B1B6003F19EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z42YU5W6WY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -598,11 +610,9 @@
 		A94C9CF92C38B1B6003F19EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z42YU5W6WY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -618,10 +628,8 @@
 		A94C9CFB2C38B1B6003F19EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z42YU5W6WY;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = shivvyas.ExpenseTrackerUITests;
@@ -636,10 +644,8 @@
 		A94C9CFC2C38B1B6003F19EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z42YU5W6WY;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = shivvyas.ExpenseTrackerUITests;
@@ -717,6 +723,14 @@
 				version = "2.0.0-beta.2";
 			};
 		};
+		A9D8D1BE2EDF847500EBC514 /* XCRemoteSwiftPackageReference "okta-oidc-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/okta/okta-oidc-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.11.7;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -740,7 +754,13 @@
 			package = A9927B482C3D071900EEB4C5 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
 		};
+		A9D8D1BF2EDF847500EBC514 /* OktaOidc */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9D8D1BE2EDF847500EBC514 /* XCRemoteSwiftPackageReference "okta-oidc-ios" */;
+			productName = OktaOidc;
+		};
 /* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A94C9CC82C38B1B0003F19EC /* Project object */;
 }
+
